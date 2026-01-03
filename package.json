@@ -1,14 +1,14 @@
 {
-    "name": "human-theme",
+    "name": "humans-theme",
     "version": "1.0.0",
-    "displayName": "Human Theme",
+    "displayName": "Humans Theme",
     "description": "A warm, organic theme designed for humanist aesthetics.",
     "publisher": "enbonnet",
     "license": "MIT",
     "scripts": {
         "build": "node ./scripts/build.js",
         "lint": "node ./scripts/lint.js",
-        "package": "vsce package -o ./bin/human.vsix",
+        "package": "vsce package -o ./bin/humans.vsix",
         "watch": "nodemon",
         "vscode:prepublish": "npm run build",
         "vsce:publish": "vsce publish"
@@ -18,10 +18,10 @@
     ],
     "repository": {
         "type": "git",
-        "url": "https://github.com/enBonnet/human-theme-vscode.git"
+        "url": "https://github.com/enBonnet/humans-theme-vscode.git"
     },
     "bugs": {
-        "url": "https://github.com/enBonnet/human-theme-vscode/issues"
+        "url": "https://github.com/enBonnet/humans-theme-vscode/issues"
     },
     "engines": {
         "vscode": "^1.13.0"
@@ -30,7 +30,9 @@
         "Themes"
     ],
     "keywords": [
-        "human",
+        "orange",
+        "humanist",
+        "humans",
         "light",
         "dark",
         "theme",
@@ -40,14 +42,14 @@
     "contributes": {
         "themes": [
             {
-                "label": "Human",
+                "label": "Humans",
                 "uiTheme": "vs-dark",
-                "path": "./theme/human.json"
+                "path": "./theme/humans.json"
             },
             {
-                "label": "Human Light",
+                "label": "Humans Light",
                 "uiTheme": "vs",
-                "path": "./theme/human-light.json"
+                "path": "./theme/humans-light.json"
             }
         ]
     },

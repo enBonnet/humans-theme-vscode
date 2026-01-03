@@ -1,11 +1,11 @@
 $schema: vscode://schemas/color-theme
-name: Human
+name: Humans
 author: Ender Bonnet
 maintainers:
   - Ender Bonnet <enbonnet@gmail.com>
-semanticClass: theme.human
+semanticClass: theme.humans
 semanticHighlighting: true
-human:
+humans:
   base:
     - &BG        '#191917' # BG Editor and terminal
     - &FG        '#f3f3f3'

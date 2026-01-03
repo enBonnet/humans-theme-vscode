@@ -13,7 +13,7 @@ const tinycolor = require('tinycolor2');
 
 /**
  * @typedef {Object} Theme - Parsed theme object.
- * @prop {Record<'base'|'ansi'|'brightOther'|'other', string[]>} human - Human color variables.
+ * @prop {Record<'base'|'ansi'|'brightOther'|'other', string[]>} humans - Humans color variables.
  * @prop {Record<string, string|null|undefined>} colors - VSCode color mapping.
  * @prop {TokenColor[]} tokenColors - Textmate token colors.
  */
@@ -39,7 +39,7 @@ const transformLight = theme => {
     const light = JSON.parse(JSON.stringify(theme));
 
     // Check if light colors are defined
-    if (!light.human.light) {
+    if (!light.humans.light) {
         return light; // Return unchanged if no light section
     }
 
@@ -47,29 +47,29 @@ const transformLight = theme => {
     const colorMap = new Map();
 
     // Map base colors
-    const darkBase = theme.human.base;
-    const lightBase = theme.human.light.base;
+    const darkBase = theme.humans.base;
+    const lightBase = theme.humans.light.base;
     for (let i = 0; i < darkBase.length && i < lightBase.length; i++) {
         colorMap.set(darkBase[i], lightBase[i]);
     }
 
     // Map ANSI colors
-    const darkAnsi = theme.human.ansi;
-    const lightAnsi = theme.human.light.ansi;
+    const darkAnsi = theme.humans.ansi;
+    const lightAnsi = theme.humans.light.ansi;
     for (let i = 0; i < darkAnsi.length && i < lightAnsi.length; i++) {
         colorMap.set(darkAnsi[i], lightAnsi[i]);
     }
 
     // Map brightOther colors
-    const darkBrightOther = theme.human.brightOther;
-    const lightBrightOther = theme.human.light.brightOther;
+    const darkBrightOther = theme.humans.brightOther;
+    const lightBrightOther = theme.humans.light.brightOther;
     for (let i = 0; i < darkBrightOther.length && i < lightBrightOther.length; i++) {
         colorMap.set(darkBrightOther[i], lightBrightOther[i]);
     }
 
     // Map other colors
-    const darkOther = theme.human.other;
-    const lightOther = theme.human.light.other;
+    const darkOther = theme.humans.other;
+    const lightOther = theme.humans.light.other;
     for (let i = 0; i < darkOther.length && i < lightOther.length; i++) {
         colorMap.set(darkOther[i], lightOther[i]);
     }
@@ -98,10 +98,10 @@ const transformLight = theme => {
     light.tokenColors = replaceColors(light.tokenColors);
 
     // Update the color palettes
-    light.human.base = lightBase;
-    light.human.ansi = lightAnsi;
-    light.human.brightOther = lightBrightOther;
-    light.human.other = lightOther;
+    light.humans.base = lightBase;
+    light.humans.ansi = lightAnsi;
+    light.humans.brightOther = lightBrightOther;
+    light.humans.other = lightOther;
 
     // Update theme metadata
     light.name = light.name + ' Light';
@@ -112,7 +112,7 @@ const transformLight = theme => {
 
 module.exports = async () => {
     const yamlFile = await readFile(
-        join(__dirname, '..', 'src', 'human.yml'),
+        join(__dirname, '..', 'src', 'humans.yml'),
         'utf-8'
     );
 
@@ -129,7 +129,7 @@ module.exports = async () => {
     // Generate light variant if light section exists
     let light = null;
 
-    if (base.human.light) {
+    if (base.humans.light) {
         light = transformLight(base);
     }
 

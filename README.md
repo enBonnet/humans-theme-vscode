@@ -1,11 +1,11 @@
 <div align="center">
-<h1>Human Theme for Visual Studio Code</h1>
+<h1>Humans Theme for Visual Studio Code</h1>
 
-[![Version](https://img.shields.io/github/package-json/v/enBonnet/human-theme-vscode?color=e95421&style=for-the-badge&label=VS%20Marketplace)](https://marketplace.visualstudio.com/items?itemName=enbonnet.human-theme)
-[![Open VSX Version](https://img.shields.io/static/v1?label=Open%20VSX&message=Download&color=e95421&style=for-the-badge&logo=open-vsx)](https://open-vsx.org/extension/enBonnet/human-theme)
-[![Downloads](https://img.shields.io/visual-studio-marketplace/d/enbonnet.human-theme?color=e95421&style=for-the-badge&label=Downloads)](https://marketplace.visualstudio.com/items?itemName=enbonnet.human-theme)
+[![Version](https://img.shields.io/github/package-json/v/enBonnet/humans-theme-vscode?color=e95421&style=for-the-badge&label=VS%20Marketplace)](https://marketplace.visualstudio.com/items?itemName=enbonnet.humans-theme)
+[![Open VSX Version](https://img.shields.io/static/v1?label=Open%20VSX&message=Download&color=e95421&style=for-the-badge&logo=open-vsx)](https://open-vsx.org/extension/enBonnet/humans-theme)
+[![Downloads](https://img.shields.io/visual-studio-marketplace/d/enbonnet.humans-theme?color=e95421&style=for-the-badge&label=Downloads)](https://marketplace.visualstudio.com/items?itemName=enbonnet.humans-theme)
 
-<img src="https://github.com/enBonnet/human-theme-vscode/blob/main/images/icon.png?raw=true" alt="Human Theme for Visual Studio Code" width="200">
+<img src="https://github.com/enBonnet/humans-theme-vscode/blob/main/images/icon.png?raw=true" alt="Humans Theme for Visual Studio Code" width="200">
 </div>
 
 ## 📋 Table of Contents
@@ -29,7 +29,7 @@
 
 ## 🔥 The Inspiration
 
-The **Human Theme** is a warm, organic, and approachable VS Code theme. It moves away from clinical, high-contrast aesthetics in favor of earthy tones and vibrant, humanist accents. Featuring energetic oranges (`#e95421` and `#ff8142`) against a deep charcoal background, it provides a "human" touch to the digital workspace.
+The **Humans Theme** is a warm, organic, and approachable VS Code theme. It moves away from clinical, high-contrast aesthetics in favor of earthy tones and vibrant, humanist accents. Featuring energetic oranges (`#e95421` and `#ff8142`) against a deep charcoal background, it provides a "humans" touch to the digital workspace.
 
 The goal is to create an environment that feels alive and creative, mirroring the passion and nuance that humans bring to technology.
 
@@ -37,12 +37,12 @@ The goal is to create an environment that feels alive and creative, mirroring th
 
 ### Dark Theme
 <div align="center">
-<img src="https://github.com/enBonnet/human-theme-vscode/blob/main/images/screenshots/dark.png?raw=true" alt="Human Theme Dark" width="600">
+<img src="https://github.com/enBonnet/humans-theme-vscode/blob/main/images/screenshots/dark.png?raw=true" alt="Humans Theme Dark" width="600">
 </div>
 
 ### Light Theme
 <div align="center">
-<img src="https://github.com/enBonnet/human-theme-vscode/blob/main/images/screenshots/light.png?raw=true" alt="Human Theme Light" width="600">
+<img src="https://github.com/enBonnet/humans-theme-vscode/blob/main/images/screenshots/light.png?raw=true" alt="Humans Theme Light" width="600">
 </div>
 
 ## 🎨 Color Palette
@@ -82,7 +82,7 @@ The terminal colors are balanced for both vibrant accents and readability:
 | 0/8 | Black | `#1f2328` | `#808080` |
 | 1/9 | Red | `#ff8142` | `#ff5e26` |
 | 2/10 | Green | `#32cd32` | `#4ee44e` |
-| 3/11 | Yellow | `#ffd700` | `#ffeb3b` |
+| 3/11 | Yellow | `#ffd700" | `#ffeb3b` |
 | 4/12 | Blue | `#1e90ff` | `#42a5f5` |
 | 5/13 | Magenta | `#ff69b4` | `#ff80ab` |
 | 6/14 | Cyan | `#00ced1` | `#4dd0e1` |
@@ -91,17 +91,17 @@ The terminal colors are balanced for both vibrant accents and readability:
 ## 🚀 Installation
 
 ### VS Code Marketplace
-[![VS Code Marketplace](https://img.shields.io/visual-studio-marketplace/v/enbonnet.human-theme?style=for-the-badge&label=VS%20Code%20Marketplace&color=e95421)](https://marketplace.visualstudio.com/items?itemName=enbonnet.human-theme)
+[![VS Code Marketplace](https://img.shields.io/visual-studio-marketplace/v/enbonnet.humans-theme?style=for-the-badge&label=VS%20Code%20Marketplace&color=e95421)](https://marketplace.visualstudio.com/items?itemName=enbonnet.humans-theme)
 
 ### Open VSX Registry
-[![Open VSX Registry](https://img.shields.io/open-vsx/v/enBonnet/human-theme?style=for-the-badge&label=Open%20VSX%20Registry&color=e95421)](https://open-vsx.org/extension/enBonnet/human-theme)
+[![Open VSX Registry](https://img.shields.io/open-vsx/v/enBonnet/humans-theme?style=for-the-badge&label=Open%20VSX%20Registry&color=e95421)](https://open-vsx.org/extension/enBonnet/humans-theme)
 
 ## 🎛️ Using the Theme
 
 1. Open the Command Palette (`Ctrl+Shift+P` or `Cmd+Shift+P`)
 2. Type "Preferences: Color" and press Enter
-3. Search for "Human"
-4. Select either "Human" or "Human Light" from the list
+3. Search for "Humans"
+4. Select either "Humans" or "Humans Light" from the list
 
 ### Recommended Settings
 
@@ -109,7 +109,7 @@ For the best experience, add these to your `settings.json`:
 
 ```json
 {
-  "workbench.colorTheme": "Human",
+  "workbench.colorTheme": "Humans",
   "editor.fontFamily": "'Victor Mono', Monaco, Menlo, 'Courier New', monospace",
   "editor.fontSize": 16,
   "editor.lineHeight": 1.5,
@@ -120,8 +120,8 @@ For the best experience, add these to your `settings.json`:
 
 ## 🎨 Theme Variants
 
-- **Human** - Standard dark version with warm, humanist accents
-- **Human Light** - Clean light version for day-time coding
+- **Humans** - Standard dark version with warm, humanist accents
+- **Humans Light** - Clean light version for day-time coding
 
 ## 🛠 Development
 
@@ -150,10 +150,10 @@ pnpm run package
 
 ```
 ├── src/
-│   └── human.yml         # Theme source file (YAML)
+│   └── humans.yml         # Theme source file (YAML)
 ├── theme/
-│   ├── human.json        # Generated theme
-│   └── human-light.json
+│   ├── humans.json        # Generated theme
+│   └── humans-light.json
 ├── scripts/
 │   ├── build.js           # Build script
 │   └── generate.js        # Theme generator
@@ -165,7 +165,7 @@ pnpm run package
 
 Contributions are welcome! If you find any issues or have suggestions for improvements, please feel free to:
 
-1. Open an [issue](https://github.com/enbonnet/human-theme-vscode/issues)
+1. Open an [issue](https://github.com/enbonnet/humans-theme-vscode/issues)
 2. Submit a pull request
 3. Share your feedback
 
@@ -177,7 +177,7 @@ For updates, star this repository and follow me on [GitHub](https://github.com/e
 
 - Inspired by humanist design and organic aesthetics
 - Special thanks to the VS Code community for their amazing theming support
-- This theme is based on the [Dracula Theme](https://draculatheme.com/) schema, with colors adapted for the Human aesthetic.
+- This theme is based on the [Dracula Theme](https://draculatheme.com/) schema, with colors adapted for the Humans aesthetic.
 
 ## 📄 License
 

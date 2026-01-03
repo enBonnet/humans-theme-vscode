@@ -27,6 +27,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./bin/human.vsix
-          asset_name: human.vsix
+          asset_path: ./bin/humans.vsix
+          asset_name: humans.vsix
           asset_content_type: application/octet-stream
