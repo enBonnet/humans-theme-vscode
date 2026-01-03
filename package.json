@@ -1,0 +1,61 @@
+{
+    "name": "human-theme",
+    "version": "1.0.0",
+    "displayName": "Human Theme",
+    "description": "A warm, organic theme designed for humanist aesthetics.",
+    "publisher": "enbonnet",
+    "license": "MIT",
+    "scripts": {
+        "build": "node ./scripts/build.js",
+        "lint": "node ./scripts/lint.js",
+        "package": "vsce package -o ./bin/human.vsix",
+        "watch": "nodemon",
+        "vscode:prepublish": "npm run build",
+        "vsce:publish": "vsce publish"
+    },
+    "maintainers": [
+        "Ender Bonnet <@enbonnet>"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/enBonnet/human-theme-vscode.git"
+    },
+    "bugs": {
+        "url": "https://github.com/enBonnet/human-theme-vscode/issues"
+    },
+    "engines": {
+        "vscode": "^1.13.0"
+    },
+    "categories": [
+        "Themes"
+    ],
+    "keywords": [
+        "human",
+        "light",
+        "dark",
+        "theme",
+        "color-theme"
+    ],
+    "icon": "images/icon.png",
+    "contributes": {
+        "themes": [
+            {
+                "label": "Human",
+                "uiTheme": "vs-dark",
+                "path": "./theme/human.json"
+            },
+            {
+                "label": "Human Light",
+                "uiTheme": "vs",
+                "path": "./theme/human-light.json"
+            }
+        ]
+    },
+    "devDependencies": {
+        "js-yaml": "^4.1.1",
+        "nodemon": "^3.1.11",
+        "prettier": "^3.0.0",
+        "tinycolor2": "^1.6.0",
+        "vsce": "^2.15.0"
+    }
+}
