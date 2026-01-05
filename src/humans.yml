@@ -51,7 +51,7 @@ humans:
     - &BGDarker      '#302d2b' # Darkest background
   light:
     base:
-      - &BG_LIGHT        '#f3f3f3'
+      - &BG_LIGHT        '#f6f8fa'
       - &FG_LIGHT        '#1f2328'
       - &SELECTION_LIGHT '#ff8142'
       - &COMMENT_LIGHT   '#e95421'
@@ -88,7 +88,7 @@ humans:
       - &WHITE_LIGHT         '#000000'
       - &TAB_DROP_BG_LIGHT   '#e0e0e080'
       # UI Variants for Light Theme
-      - &BGDark_LIGHT        '#f6f8fa' # Sidebar, panels
+      - &BGDark_LIGHT        '#f3f3f3' # Sidebar, panels
       - &BGLighter_LIGHT     '#F5F5F4' # Subtle highlights
       - &BGLight_LIGHT       '#ffffff' # Editor background
       - &BGDarker_LIGHT      '#e0e0e0' # Widgets, inputs
