@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Language Scoping Fixes | Humans Theme</title>
+  <meta name="description" content="Complete list of languages with explicit TextMate scoping rules in the Humans VS Code theme.">
+  <link rel="icon" type="image/png" href="images/icon.png">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .page-header {
+      text-align: center;
+      padding: 120px 24px 48px;
+    }
+
+    .page-header h1 {
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 800;
+      background: linear-gradient(135deg, var(--accent), var(--accent-bright), var(--yellow));
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 12px;
+    }
+
+    .page-header p {
+      color: var(--fg-muted);
+      font-size: 1.1rem;
+      font-weight: 300;
+      max-width: 520px;
+      margin: 0 auto;
+    }
+
+    .search-container {
+      max-width: 600px;
+      margin: 0 auto 48px;
+      padding: 0 24px;
+    }
+
+    .search-input {
+      width: 100%;
+      padding: 14px 20px;
+      border-radius: 12px;
+      border: 1px solid var(--bg-lighter);
+      background: var(--bg-light);
+      color: var(--fg);
+      font-family: inherit;
+      font-size: 1rem;
+      outline: none;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .search-input::placeholder {
+      color: var(--fg-muted);
+    }
+
+    .search-input:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(233, 84, 33, 0.15);
+    }
+
+    .lang-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 20px;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px 80px;
+    }
+
+    .lang-card {
+      background: var(--bg-light);
+      border: 1px solid var(--bg-lighter);
+      border-radius: 10px;
+      padding: 20px 24px;
+      transition: transform 0.3s ease, border-color 0.3s ease;
+    }
+
+    .lang-card:hover {
+      transform: translateY(-3px);
+      border-color: var(--accent);
+    }
+
+    .lang-name {
+      font-weight: 700;
+      font-size: 1.1rem;
+      margin-bottom: 12px;
+      color: var(--fg);
+    }
+
+    .scopes {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .scope-badge {
+      background: rgba(173, 127, 168, 0.12);
+      color: var(--purple);
+      font-family: 'SF Mono', 'Fira Code', 'Fira Mono', Menlo, Consolas, monospace;
+      font-size: 0.78rem;
+      padding: 3px 10px;
+      border-radius: 6px;
+      white-space: nowrap;
+    }
+
+    .empty-state {
+      text-align: center;
+      padding: 60px 24px;
+      color: var(--fg-muted);
+      font-weight: 300;
+      font-size: 1.1rem;
+      grid-column: 1 / -1;
+      display: none;
+    }
+
+    @media (max-width: 768px) {
+      .page-header {
+        padding: 100px 16px 36px;
+      }
+
+      .lang-grid {
+        grid-template-columns: 1fr;
+        padding: 0 16px 60px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a href="index.html" class="logo">
+      <img src="images/icon.png" alt="Humans Theme logo">
+      Humans Theme
+    </a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="languages.html" style="color: var(--accent);">Languages</a>
+      <a href="https://github.com/enBonnet/humans-theme-vscode" target="_blank" rel="noopener">GitHub</a>
+    </nav>
+  </div>
+</header>
+
+<main class="page-content">
+
+  <section class="page-header">
+    <h1>Language Scoping Fixes</h1>
+    <p>Every language listed below has at least one explicit TextMate scope rule in the theme. Additional languages are covered by general-purpose scoping.</p>
+  </section>
+
+  <div class="search-container">
+    <input type="text" class="search-input" placeholder="Search languages..." autocomplete="off">
+  </div>
+
+  <div class="lang-grid" id="lang-grid">
+    <div class="empty-state" id="empty-state">No languages match your search.</div>
+  </div>
+
+</main>
+
+<footer>
+  <p>Crafted with &#x1f525; by <a href="https://enbonnet.com">Ender Bonnet</a>. Licensed under <a href="https://github.com/enBonnet/humans-theme-vscode/blob/main/LICENSE">MIT</a>.</p>
+</footer>
+
+<script>
+  const languages = [
+    {
+      name: "C",
+      scopes: ["storage.type.c", "keyword.operator.dereference"]
+    },
+    {
+      name: "C#",
+      scopes: ["keyword.type.cs", "storage.type.cs", "punctuation.definition.tag.cs"]
+    },
+    {
+      name: "CSS",
+      scopes: ["entity.other.attribute-name", "meta.selector", "entity.other.attribute-name.parent-selector", "punctuation.separator.list.comma.css"]
+    },
+    {
+      name: "CoffeeScript",
+      scopes: ["meta.variable.assignment.destructured.object.coffee", "punctuation.section.embedded.coffee"]
+    },
+    {
+      name: "F#",
+      scopes: ["keyword.other", "variable.other", "constant.language.unit"]
+    },
+    {
+      name: "Go",
+      scopes: ["source.go storage.type"]
+    },
+    {
+      name: "GraphQL",
+      scopes: ["meta.selectionset.graphql", "meta.arguments.graphql", "entity.name.fragment.graphql", "punctuation.colon.graphql"]
+    },
+    {
+      name: "Groovy",
+      scopes: ["meta.method.groovy", "source.groovy storage.type.def", "source.groovy storage.type", "keyword.operator.navigation.groovy"]
+    },
+    {
+      name: "Haskell",
+      scopes: ["storage.type.haskell", "constant.language.empty-list.haskell", "meta.preprocessor.haskell"]
+    },
+    {
+      name: "HTML",
+      scopes: ["entity.name.tag", "entity.other.attribute-name"]
+    },
+    {
+      name: "Java",
+      scopes: ["meta.method-call.java meta.method", "source.java storage.type", "storage.modifier.import", "storage.type.generic.java"]
+    },
+    {
+      name: "JavaScript",
+      scopes: ["punctuation.section.embedded.begin.jsx", "punctuation.section.embedded.end.jsx", "variable.other.constant.js", "meta.function-call"]
+    },
+    {
+      name: "JSX",
+      scopes: ["punctuation.section.embedded.begin.jsx", "punctuation.section.embedded.end.jsx"]
+    },
+    {
+      name: "Lua",
+      scopes: ["support.function.any-method.lua"]
+    },
+    {
+      name: "Makefile",
+      scopes: ["punctuation.definition.variable.makefile", "entity.name.function.target.makefile", "meta.scope.prerequisites.makefile"]
+    },
+    {
+      name: "Markdown",
+      scopes: ["markup.heading", "markup.bold", "markup.italic", "markup.inline.raw", "markup.quote", "markup.underline.link", "fenced_code.block.language", "meta.separator.markdown"]
+    },
+    {
+      name: "Objective-C",
+      scopes: ["meta.implementation storage.type.objc", "meta.interface-or-protocol storage.type.objc", "meta.protocol-list.objc", "meta.return-type.objc", "storage.type.objc"]
+    },
+    {
+      name: "OCaml",
+      scopes: ["storage.type.ocaml"]
+    },
+    {
+      name: "Perl",
+      scopes: ["constant.other.key.perl"]
+    },
+    {
+      name: "PHP",
+      scopes: ["meta.function-call.php", "punctuation.terminator.expression.php", "storage.type.php", "meta.function.arguments variable.other.php", "variable.other.readwrite.instance.php"]
+    },
+    {
+      name: "PowerShell",
+      scopes: ["keyword.other.other.powershell", "keyword.other.statement-separator.powershell", "source.powershell entity.other.attribute-name", "support.constant"]
+    },
+    {
+      name: "Python",
+      scopes: ["string.quoted.docstring.multi.python", "constant.character.escape"]
+    },
+    {
+      name: "reStructuredText",
+      scopes: ["punctuation.definition.link.restructuredtext", "markup.raw.restructuredtext", "meta.link.reference.def.restructuredtext", "punctuation.definition.directive.restructuredtext", "entity.name.directive.restructuredtext", "punctuation.definition.constant.restructuredtext"]
+    },
+    {
+      name: "Ruby",
+      scopes: ["variable.other.readwrite.instance.ruby", "constant.other.symbol.hashkey.ruby", "punctuation.definition.constant.ruby", "support.other.chomping-indicator.yaml"]
+    },
+    {
+      name: "Rust",
+      scopes: ["storage.class.std.rust", "storage.type.core.rust"]
+    },
+    {
+      name: "SCSS",
+      scopes: ["meta.at-rule.function variable", "meta.at-rule.mixin variable", "meta.attribute-selector.scss", "punctuation.definition.attribute-selector"]
+    },
+    {
+      name: "Shell",
+      scopes: ["source.shell variable.other", "meta.scope.for-loop.shell"]
+    },
+    {
+      name: "Swift",
+      scopes: ["keyword.expressions-and-types.swift", "keyword.primitive-datatypes.swift", "storage.type.attribute.swift", "punctuation.function.swift", "storage.type"]
+    },
+    {
+      name: "TOML",
+      scopes: ["meta.group.double.toml", "meta.group.toml", "entity.name.section.toml", "variable.other.key.toml", "constant.other.date", "constant.other.timestamp"]
+    },
+    {
+      name: "TypeScript",
+      scopes: ["variable.other.constant.ts", "variable.other.constant.tsx", "meta.type.parameters entity.name.type", "meta.indexer.mappedtype.declaration entity.name.type"]
+    },
+    {
+      name: "TSX",
+      scopes: ["punctuation.section.embedded.begin.tsx", "punctuation.section.embedded.end.tsx"]
+    },
+    {
+      name: "YAML",
+      scopes: ["entity.name.tag.yaml", "punctuation.definition.block.scalar.folded.yaml", "punctuation.definition.block.sequence.item.yaml", "punctuation.separator.key-value.mapping.yaml", "variable.other.alias.yaml"]
+    }
+  ];
+
+  const langGrid = document.getElementById('lang-grid');
+  const emptyState = document.getElementById('empty-state');
+  const searchInput = document.querySelector('.search-input');
+
+  function renderCards(filterText) {
+    langGrid.querySelectorAll('.lang-card').forEach(card => card.remove());
+
+    const term = filterText.toLowerCase().trim();
+    const filtered = term
+      ? languages.filter(l => l.name.toLowerCase().includes(term))
+      : languages;
+
+    if (filtered.length === 0) {
+      emptyState.style.display = 'block';
+    } else {
+      emptyState.style.display = 'none';
+      filtered.forEach(lang => {
+        const card = document.createElement('div');
+        card.className = 'lang-card';
+
+        const name = document.createElement('div');
+        name.className = 'lang-name';
+        name.textContent = lang.name;
+
+        const scopes = document.createElement('div');
+        scopes.className = 'scopes';
+
+        lang.scopes.forEach(scope => {
+          const badge = document.createElement('span');
+          badge.className = 'scope-badge';
+          badge.textContent = scope;
+          scopes.appendChild(badge);
+        });
+
+        card.appendChild(name);
+        card.appendChild(scopes);
+        langGrid.appendChild(card);
+      });
+    }
+  }
+
+  renderCards('');
+  searchInput.addEventListener('input', (e) => renderCards(e.target.value));
+</script>
+
+</body>
+</html>
